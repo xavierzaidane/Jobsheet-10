@@ -20,6 +20,7 @@ public class bioslop25 {
         System.out.println(audience.length);
         for (String[] rowAudience: audience) {
             System.out.println("Length of row:" + rowAudience.length);
+
             }
         }
      
