@@ -18,9 +18,8 @@ public class bioslop25 {
         System.out.println(audience.length);
 
         System.out.println("Audiences in the row 3: "); {
-        for (int i=0; i< audience.length; i++) {
-System.out.println("Audience in the row: " + ( i + 1 )  + String.join(", ", audience[i]));
-            
+            for (String[] rowAudience: audience) {
+                System.out.println("Length of row:" +rowAudience.length);
     }
         }
     }
