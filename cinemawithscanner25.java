@@ -1,7 +1,7 @@
 import java.util.Scanner;
-public class cinemawithscanner25 {
+public class bioslop25 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner (System.in);
         String[][] audience = new String[4][2];
         audience[0][0] = "Amin";
         audience[0][1] = "Bena";
@@ -16,13 +16,19 @@ public class cinemawithscanner25 {
         System.out.printf("%s \t %s \n",audience[2][0],audience[2][1]);
         System.out.printf("%s \t %s \n",audience[3][0],audience[3][1]);
         System.out.println(audience.length);
-        
-        System.out.println("Audience in the row 3 : ");
-        for(int i = 0;i< audience.length;i++){
-            System.out.println("Audience in the row " +(i+1)+ String.join(",", audience [i]));
-            }
-            
-        
-        
-        }    
+
+        System.out.println("Audiences in the row 3: "); {
+            for (String[] rowAudience: audience) {
+                System.out.println("Length of row:" +rowAudience.length);
+    }
         }
+    }
+
+}
+       
+
+
+
+
+
+    
