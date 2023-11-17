@@ -1,30 +1,80 @@
 import java.util.Scanner;
-public class bioslop25 {
+public class cinemawithscanner25 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner (System.in);
-        String[][] audience = new String[4][2];
-        audience[0][0] = "Amin";
-        audience[0][1] = "Bena";
-        audience[1][0] = "Candra";
-        audience[1][1] = "Dela";
-        audience[2][0] = "Eka";
-        audience[2][1] = "Farhan";
-        audience[3][0] = "Gisel";
-        audience[3][1] = "Hana";
-        System.out.printf("%s \t %s \n",audience[0][0],audience[0][1]);
-        System.out.printf("%s \t %s \n",audience[1][0],audience[1][1]);
-        System.out.printf("%s \t %s \n",audience[2][0],audience[2][1]);
-        System.out.printf("%s \t %s \n",audience[3][0],audience[3][1]);
-        System.out.println(audience.length);
+    Scanner scan = new Scanner(System.in);
+    String name;
+    int row,column;
+    boolean menu = true;
+    String[][] audience = new String [4][2];
 
-        System.out.println("Audiences in the row 3: "); {
-            for (String[] rowAudience: audience) {
-                System.out.println("Length of row:" +rowAudience.length);
-    }
+
+while(true){
+    System.out.println("MENU");
+    System.out.println("1. Input audience data");
+    System.out.println("2. Show audience list");
+    System.out.println("3. Exit");
+
+    System.out.println("Input your choice");
+    int choice = scan.nextInt();
+    scan.nextLine();
+
+    switch (choice) {
+        case 1 :
+        System.out.println("Enter a name : ");
+        name = scan.nextLine();
+        System.out.println("Enter a row number : ");
+        row = scan.nextInt();
+        System.out.println("Enter column number : ");
+        column= scan.nextInt();
+        scan.nextLine();
+        
+        if(audience[row - 1][column - 1] == null){
+            audience[row - 1][column - 1] = name;
+        System.out.println("Succesfuly booked");
+            
         }
-    }
+        else{
+            System.out.println("The seat is already booked \n choose the other");
+            break;
+        }
+    
+        
+        //audience[row - 1][column - 1] = name;
+        System.out.println("Are there any other audiences to be added ? (y/n) : ");
+        String next = scan.nextLine();
 
+            break;
+
+        case 2 :
+        System.out.println("Audience List");
+        for (int i = 0;i<audience.length;i++){
+            for (int j = 0 ;j<audience[i].length;j++){
+            if(audience[i][j] == null){
+                System.out.println("****\t");
+            }
+            else{
+                System.out.println(audience[i] [j] + "\t");
+            }
+            }
+            System.out.println();
+        }
+        break;
+    
+        case 3:
+        System.out.println("THANK YOU");
+        System.exit(0);
+        break;
+    }
+    
+    
+
+    
 }
+
+    }
+}
+
+
        
 
 
